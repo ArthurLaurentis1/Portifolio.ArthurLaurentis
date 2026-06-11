@@ -1,0 +1,665 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Teko:wght@300..700&family=Oswald:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* VARIAVEL */ 
+:root {
+    --cor-fundo:  #f4f0ea;
+    --cor-escura: #1C1C1C;
+    --cor-media:  #696969;
+    --cor-clara:  #f4f0ea;
+    --nav-altura: 70px;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Inter, sans-serif;
+    font-weight: 500;
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--nav-altura);
+}
+
+body {
+    background-color: var(--cor-fundo);
+    font-weight: 400;
+    overflow-x: hidden; /* corta o que passar da borda direita/esquerda */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* remove o espaço fantasma */
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* PARTE DA LOGO */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav {
+    height: var(--nav-altura);
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--cor-escura);
+    position: relative;
+}
+
+.abas {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+}
+
+.logo {
+    font-family: Teko, sans-serif;
+    font-weight: 550;
+    font-size: 1.8rem;
+    color: var(--cor-clara);
+    transition: 0.3s;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.logo:hover {
+    transform: scale(1.1); /* aumenta */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+.logo_a{
+    display: inline-block;
+    text-decoration: none;
+    color: var(--cor-clara);
+    font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    transition: color 0.3s, transform 0.3s;
+    white-space: nowrap;
+}
+
+.logo_a:hover {
+    color: #aaa;
+    cursor: pointer;
+    transform: translateY(-2px);
+}
+
+/* Hub do GitHub */
+.logo_hub {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-shrink: 0;
+}
+
+.foto_git {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.logo_git {
+    font-family: Inter, sans-serif;
+    text-decoration: none;
+    color: var(--cor-clara);
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: color 0.3s, transform 0.3s;
+    white-space: nowrap;
+}
+
+.logo_git:hover {
+    color: #888;
+    cursor: pointer;
+    transform: translateY(-2px);
+}
+
+/* PARTE INICIO */
+
+.inicio {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 2rem;
+}
+ 
+.iniciopag {
+    min-height: 75vh;
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.iniciopag:hover {
+    transform: scale(1.1);
+}
+
+.inicio_span {
+    font-family: bebas neue, sans sans-serif;
+    color: var(--cor-media);
+    letter-spacing: 2px;
+    font-size: 1.1rem;
+    padding: 0.5rem;
+}
+
+h1 {
+    font-family: teko, sans-serif;
+    font-size: clamp(2.5rem, 8vw, 5rem); /* escala com a tela */
+    color: var(--cor-escura);
+    line-height: 1;
+}
+
+.inicio_sub {
+    font-family: Teko, sans-serif;
+    font-weight: 200;
+    letter-spacing: 0.8px;
+    font-size: clamp(1.1rem, 3vw, 1.6rem);
+}
+
+.inicio_hr {
+    border: none;
+    border-top: 2px solid var(--cor-escura);
+    width: clamp(120px, 40%, 300px);
+    margin: 1rem 0;
+}
+
+
+/* PARTE SOBRE*/
+
+.sobre {
+    background-color: #696969;
+    min-height: 80vh;
+    padding: 5rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+}
+
+.sobre-texto {
+    flex: 1 1 55%;
+    min-width: 0;
+}
+
+.sobre_foto {
+    flex: 0 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sobre_h2 {
+    font-family: bebas neue, sans-serif;
+    color: var(--cor-clara);
+    font-size: clamp(3rem, 8vw, 6rem);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.sobre_hr {
+    border: none;
+    border-top: 1px solid var(--cor-clara);
+    width: 60%;
+    margin-bottom: 2rem;
+}
+
+.sobre_p {
+    font-family: oswald, sans-serif;
+    color: var(--cor-clara);
+    font-size: clamp(1rem, 2.2vw, 1.4rem);
+    font-weight: 200;
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.foto {
+    width: clamp(250px, 35vw, 600px);
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+}
+
+.foto:hover {
+    transform: scale(1.05);
+}
+
+
+/* PARTE HABILIDADES */
+
+
+.habilidades {
+    background-color: var(--cor-fundo);
+    padding: 5rem 3rem;
+    min-height: 80vh;
+}
+
+.habilidades_cabecalho {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.habilidades_span {
+    font-family: bebas neue, sans-serif;
+    color: var(--cor-media);
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+    display: block;
+    text-align: center;
+}
+
+.habilidades_h2 {
+    font-family: bebas neue, sans-serif;
+    color: var(--cor-escura);
+    font-size: clamp(3rem, 8vw, 6rem);
+    line-height: 1;
+}
+
+.habilidades_hr {
+    border: none;
+    border-top: 2px solid var(--cor-escura);
+    width: 50%;
+    margin: 1rem auto 2rem;
+}
+
+.habilidades_div {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.habilidades_p {
+    font-family: oswald, sans-serif;
+    color: var(--cor-escura);
+    font-size: clamp(1rem, 2vw, 1.4rem);
+    font-weight: 200;
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.habilidades_linha {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    padding: 3rem 1rem;
+    flex-wrap: wrap; /* quebra em colunas no mobile */
+}
+
+.habilidades_bloco {
+    flex: 1 1 220px;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    border: 3px solid var(--cor-escura);
+    border-radius: 20px;
+    padding-bottom: 2rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.habilidades_bloco:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.habilidades_h3 {
+    font-family: bebas neue, sans-serif;
+    color: var(--cor-escura);
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    padding: 1.5rem 2rem 0;
+}
+
+.habilidades_hr1 {
+    border: none;
+    border-top: 2px solid var(--cor-escura);
+    width: 70%;
+}
+
+.habilidades_ul {
+    font-family: oswald, sans-serif;
+    color: var(--cor-escura);
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-weight: 200;
+    letter-spacing: 0.5px;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    align-items: center;
+    text-align: center;
+}
+
+/* PARTE PROJETOS */
+
+.projetos {
+    background-color: var(--cor-escura);
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.projetos_h2 {
+    font-family: bebas neue, sans-serif;
+    color: var(--cor-clara);
+    letter-spacing: 2px;
+    font-size: clamp(2.5rem, 7vw, 5rem)
+}
+
+.projetos_hr {
+    border: none;
+    border-top: 2px solid var(--cor-clara);
+    width: 30%;
+    margin: 1rem auto;
+}
+
+.projetos_cards {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    justify-content: center;
+    align-items: stretch;
+    margin-top: 2rem;
+}
+
+.projetos_card {
+   border: 2px dashed rgba(244, 240, 234, 0.3);
+    border-radius: 12px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    width: 180px;       /* largura fixa */
+    height: 180px;      /* altura fixa */
+    flex-shrink: 0;     /* não encolhe */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.3s;
+}
+
+.projetos_card:hover {
+    border-color: rgba(244, 240, 234, 0.7);
+}
+
+.projetos_icone {
+    display: block;
+    font-size: 2rem;
+    color: rgba(244, 240, 234, 0.3);
+    margin-bottom: 0.5rem;
+}
+
+.projetos_p {
+    font-family: Oswald, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: rgba(244, 240, 234, 0.35);
+    letter-spacing: 1px;
+}
+
+/* PARTE EXPERIÊNCIA */
+
+.experiencia {
+    background-color: #f4f0ea;
+    padding: 5rem 3rem;
+    min-height: 80vh;
+}
+
+.experiencia_h2 {
+    font-family: bebas neue, sans-serif;
+    color: #1C1C1C;
+    color: var(--cor-escura);
+    font-size: clamp(2.5rem, 7vw, 5rem);
+    text-align: center;
+}
+
+.experiencia_hr {
+    border: none;
+    border-top: 2px solid var(--cor-escura);
+    width: 50%;
+    margin: 1rem auto 2rem;
+}
+
+.experiencia_bloco {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.experiencia_p {
+    font-family: oswald, sans-serif;
+    color: var(--cor-escura);
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-weight: 200;
+    letter-spacing: 0.5px;
+    line-height: 1.7;
+    text-align: center;
+    margin-bottom: 1.2rem;
+}
+
+
+/* PARTE CONTATOS */
+
+.contato {
+    background-color: var(--cor-media);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.contato_h2 {
+    font-family: bebas neue, sans-serif;
+    color: var(--cor-clara);
+    font-size: clamp(2.5rem, 7vw, 5rem);
+    margin-bottom: 0.5rem;
+}
+
+.contato_span {
+    font-family: bebas neue, sans-serif;
+    color: var(--cor-clara);
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+    display: block;
+}
+
+.contato_linha {
+    display: flex;
+    flex-wrap: wrap; /* quebra no mobile */
+    gap: 1.5rem;
+    justify-content: center;
+    padding: 2.5rem 1rem;
+}
+
+.contato_p {
+    font-family: oswald, sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 0.8px;
+}
+
+.contato_a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--cor-clara);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: color 0.3s, transform 0.3s;
+    white-space: nowrap;
+}
+
+.contato_a:hover {
+    color: #cccc;
+    transform: translateY(-3px);
+}
+
+/* Rodapé final */
+
+.contato_abafinal {
+    background-color: #1C1C1C;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.contato_final {
+    color: #f4f0ea;
+    font-size: 0.95rem;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+/* RESPONSIVIDADE */
+ 
+/* --- TABLET (até 1024px) --- */
+@media (max-width: 1024px) {
+    .abas {
+        gap: 1.2rem;
+    }
+
+    .foto {
+        width: clamp(220px, 38vw, 480px);
+    }
+
+    .sobre {
+        padding: 4rem 2.5rem;
+        gap: 2rem;
+    }
+ 
+    .habilidades_linha {
+        gap: 2rem;
+    }
+ 
+    .contato_linha {
+        gap: 2rem;
+    }
+}
+ 
+/* --- MOBILE (até 768px) --- */
+@media (max-width: 768px) {
+ 
+   .nav {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+    gap: 0.8rem;
+    }
+
+    .abas {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+    }
+ 
+    .logo_a {
+        font-size: 1rem;
+    }
+ 
+    /* SOBRE: coluna única, foto centralizada */
+    .sobre {
+        flex-direction: column;
+        padding: 3rem 1.5rem;
+        text-align: center;
+        min-height: auto;
+    }
+ 
+    .sobre_foto {
+        order: -1; /* foto vem antes do texto no mobile */
+    }
+ 
+    .sobre_hr {
+        margin: 1rem auto 1.5rem;
+    }
+ 
+    .sobre_p {
+        margin-right: 0;
+        margin-left: 0;
+    }
+ 
+    .foto {
+        width: clamp(200px, 60vw, 350px);
+    }
+ 
+    /* HABILIDADES: blocos em coluna */
+    .habilidades_linha {
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0;
+    }
+ 
+    .habilidades_bloco {
+        max-width: 100%;
+        width: 100%;
+    }
+ 
+    /* CONTATO */
+    .contato_linha {
+        gap: 1rem;
+        padding: 1.5rem 1rem;
+    }
+ 
+    .contato_abafinal {
+        justify-content: center;
+        text-align: center;
+    }
+}
+ 
+/* --- MOBILE PEQUENO (até 480px) --- */
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.3rem;
+    }
+ 
+    .inicio {
+        padding: 2rem 1rem;
+    }
+ 
+    .iniciopag {
+        min-height: 65vh;
+        padding: 2rem 1rem;
+    }
+ 
+    .sobre {
+        padding: 2.5rem 1rem;
+    }
+ 
+    .habilidades {
+        padding: 3rem 1rem;
+    }
+ 
+    .experiencia {
+        padding: 3rem 1rem;
+    }
+ 
+    .projetos {
+        padding: 3rem 1rem;
+    }
+ 
+    .contato {
+        padding: 3rem 1rem;
+    }
+ 
+    .contato_linha {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
